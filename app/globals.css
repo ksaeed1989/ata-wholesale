@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* ===============================
+   DARK LUXURY THEME (GLOBAL)
+================================ */
+
+:root {
+  --background: #0b0f14;      /* Main dark background */
+  --background-soft: #11161d; /* Cards background */
+  --foreground: #e5e7eb;      /* Main text color */
+  --muted: #94a3b8;           /* Secondary text */
+  --accent: #10b981;          /* Emerald brand color */
+}
+
+/* Force dark mode always */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f14;
+    --background-soft: #11161d;
+    --foreground: #e5e7eb;
+    --muted: #94a3b8;
+    --accent: #10b981;
+  }
+}
+
+/* Apply globally */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: smoother feel */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
